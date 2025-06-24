@@ -24,3 +24,25 @@ for record in records:
 # Display the results of Each student's name their list of grades
 for student in class_journal:
   print(student, ":", class_journal[student])
+
+
+#Part 2: The Basic Report
+
+  # pass by  each student name we saved in the class_journal dictionary,
+for student in class_journal:
+  grades = class_journal[student]  # grab the grades list
+  total = 0  # total sum of all grades
+
+  # pass by each grade and add to the total
+  for grade in grades:
+    total = total + grade
+
+  #Calculate their average grade (rounded to 2 decimal places)
+  average = total / len(grades)  
+  average = round(average, 2)  
+
+  # print name, grades, and average , a dotted line to seperate between students average .
+  print("Student Name :", student)
+  print("Grades:", grades)
+  print("Average of " + student + ": " + str(average))
+  print("-------------") 
