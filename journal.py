@@ -42,6 +42,7 @@ for student in class_journal:
   average = round(average, 2)  
 
   # print name, grades, and average , a dotted line to seperate between students average .
+  print("-------------") 
   print("Student Name :", student)
   print("Grades:", grades)
   print("Average of " + student + ": " + str(average))
@@ -109,3 +110,63 @@ file.write("Total number of grades: " + str(total_grades) + "\n")
 file.write("Overall class average is " + str(class_average) + "\n")
 file.close()
 print("Check text file  'Class_Report.txt'")
+
+
+# Existing class journal
+class_journal = {
+  "Layla": [89, 91, 86],
+  "Tariq": [77, 84, 73],
+  "Jana": [100, 97, 94],
+  "Ziad": [62, 71, 75]
+}
+
+# New sets of grades
+new_grades = [["Jana", 99], ["Ziad", 78], ["Layla", 84]]
+
+# A new set of grades are added to the class_joirnal
+for set in new_grades:
+  name = set[0]
+  grade = set[1]
+
+  if name in class_journal:
+    class_journal[name].append(grade)  # add the grade to their existing student's name list.
+  else:
+    class_journal[name] = [grade]      # create a new student name list  with their grade
+
+
+highest_avg = 0
+highest_avg_student = ""
+
+smallest_range = 100 # Starting value.
+most_consistent_student = ""
+
+students_with_low_grade = []
+
+total_grades = 0
+sum_of_all_grades = 0
+
+
+
+for name in class_journal:
+  grades = class_journal[name]
+  total = 0
+
+  for grade in grades:
+    total += grade
+
+  average = total / len(grades)
+
+  if average > highest_avg:
+    highest_avg = average
+    highest_avg_student = name
+
+  grade_range = max(grades) - min(grades)
+
+  if grade_range < smallest_range:
+    smallest_range = grade_range
+    most_consistent_student = name
+
+  
+
+
+

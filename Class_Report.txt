@@ -1,0 +1,6 @@
+Highest Average: Jana (97.5)
+Most Consistent: Jana (range: 6)
+Students with at least one grade below 70:
+- Ziad
+Total number of grades: 15
+Class Average: 84.0
