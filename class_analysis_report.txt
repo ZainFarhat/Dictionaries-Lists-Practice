@@ -1,0 +1,5 @@
+Student with the highest average is: Jana having 97.0
+Most consistent performance :Layla with range of 5
+Students with a grade < 70:Ziad
+Total number of grades: 12
+Overall class average is 83.25
